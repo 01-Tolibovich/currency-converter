@@ -1,0 +1,38 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  background-color: $bg-color;
+}
+
+.container {
+  width: 100%;
+  max-width: 1330px;
+  padding: 0 15px;
+  margin: 0 auto;
+  position: relative;
+
+  @include mediaMax($xl) {
+    max-width: 1130px;
+  }
+
+  @include mediaMax($lg) {
+    max-width: 830px;
+  }
+
+  @include mediaMax($md) {
+    max-width: 630px;
+  }
+
+  @include mediaMax($sm) {
+    max-width: 100%;
+  }
+}

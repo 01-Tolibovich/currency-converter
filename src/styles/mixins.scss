@@ -1,0 +1,31 @@
+@import "./variables.scss";
+
+@mixin neomorphismEffect() {
+  border-radius: $border-radius;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.5), -4px -4px 16px rgba(255, 255, 255, 0.05);
+  border: 1px solid $neo-border-color;
+}
+
+@function getMaxWidth($max) {
+  @return $max - 1px;
+}
+
+@mixin mediaMin($min) {
+  @media (min-width: $min) {
+    @content;
+  }
+}
+
+@mixin mediaMax($max) {
+  @media (max-width: getMaxWidth($max)) {
+    @content;
+  }
+}
+
+@mixin mediaMinMax($min, $max) {
+  @media (min-width: $min) and (max-width: getMaxWidth($max)) {
+    @content;
+  }
+}
+
+

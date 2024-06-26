@@ -1,0 +1,31 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.input-section {
+  @include neomorphismEffect();
+  color: #F0F8FF;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+
+  @include mediaMax($sm) {
+    flex-direction: column;
+  }
+
+  .input-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+
+    .validation-text {
+      color: $error-color;
+      opacity: 0;
+      transition: 300ms;
+
+      &.show {
+        opacity: 1;
+      }
+    }
+  }
+}

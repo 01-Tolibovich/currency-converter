@@ -1,0 +1,19 @@
+@import "./styles/variables.scss";
+@import "./styles/mixins.scss";
+
+.App {
+  min-height: 90vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+
+  .title {
+    margin: 3rem 0;
+    color: $primary-color;
+    font-size: clamp(24px, 3vw, 32px);
+
+    @include mediaMax($sm) {
+      text-align: center;
+    }
+  }
+}
