@@ -1,0 +1,21 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.button-ui {
+  cursor: pointer;
+  background-color: transparent;
+  padding: 6px 24px;
+  font-size: 18px;
+  border-radius: 30px;
+  color: $text-color;
+  @include neomorphismEffect();
+  transition: 200ms;
+
+  &:hover {
+    color: $primary-color;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}

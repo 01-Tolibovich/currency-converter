@@ -12,10 +12,11 @@ input {
   border-color: #5d5d5d82;
   color: #F0F8FF;
   font-size: 1rem;
+  width: 100%;
+  font-size: 18px;
 
   &:focus-visible {
-    outline: 1px solid $primary-color;
-
+    outline: 1px solid rgba(177, 140, 27, 0.4);
   }
 
   &[type="number"]::-webkit-inner-spin-button,

@@ -3,10 +3,9 @@
 
 .App {
   min-height: 90vh;
-  display: grid;
-  align-items: center;
-  justify-items: center;
-
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   .title {
     margin: 3rem 0;
     color: $primary-color;
@@ -14,6 +13,21 @@
 
     @include mediaMax($sm) {
       text-align: center;
+    }
+  }
+
+  .app-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 2rem;
+
+    @include mediaMax($md) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include mediaMax($sm) {
+      grid-template-columns: 1fr;
     }
   }
 }
